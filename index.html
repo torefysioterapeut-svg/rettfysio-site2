@@ -40,17 +40,25 @@
     .hero { position:relative; }
   .hero-visual {
   width: 100%;
-  height: min(68vh, 620px);            /* litt høyere toppfelt = mer av situasjonen */
+  height: min(72vh, 660px);            /* litt høyere = mer av scenen vises */
   border-radius: 0 0 var(--radius) var(--radius);
 
-  /* svakt slør + ditt nye bilde (endre filnavn her hvis du bruker annet navn) */
   background-image:
-    linear-gradient(135deg, rgba(14,165,164,.16), rgba(15,118,110,.16)),
-    url('assets/helt.jpg');
-
-  background-size: cover;
-  background-position: center 55%;     /* flytt utsnittet NED = mer kropp/øvelse */
+    linear-gradient(135deg, rgba(14,165,164,.14), rgba(15,118,110,.14)),
+    url('assets/helt.jpg');            /* bruk ditt filnavn her om det er annet */
+  background-size: cover;              /* fyll hele feltet */
+  background-position: center 24%;     /* 24% = flytt fokus opp (mer hode + kropp) */
   background-repeat: no-repeat;
+}
+
+/* På mobil – litt lavere høyde og justert utsnitt */
+@media (max-width: 680px) {
+  .hero-visual {
+    height: 52vh;
+    background-position: center 30%;
+  }
+}
+
 }
 
 /* På mobil: litt lavere utsnitt og høyde */
