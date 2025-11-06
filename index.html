@@ -38,21 +38,29 @@
 
     /* Hero med bilde (viser gradient hvis bilde mangler) */
     .hero { position:relative; }
-    .hero-visual {
+  .hero-visual {
   width: 100%;
-  height: min(62vh, 560px);
+  height: min(68vh, 620px);            /* litt høyere toppfelt = mer av situasjonen */
   border-radius: 0 0 var(--radius) var(--radius);
 
-  /* Bildet + lett filter */
- background-image:
-  linear-gradient(135deg, rgba(14,165,164,.24), rgba(15,118,110,.24)),
-  url('assets/helt.jpg');
+  /* svakt slør + ditt nye bilde (endre filnavn her hvis du bruker annet navn) */
+  background-image:
+    linear-gradient(135deg, rgba(14,165,164,.16), rgba(15,118,110,.16)),
+    url('assets/helt.jpg');
 
   background-size: cover;
+  background-position: center 42%;     /* flytt utsnittet NED = mer kropp/øvelse */
   background-repeat: no-repeat;
+}
 
-  /* Flytt utsnittet litt opp så hele ansiktet synes */
-  background-position: center 8%;
+/* På mobil: litt lavere utsnitt og høyde */
+@media (max-width: 680px) {
+  .hero-visual {
+    height: 48vh;
+    background-position: center 55%;
+  }
+}
+
 }
 
 /* På mobil: litt lavere, så ansiktet ikke kuttes */
