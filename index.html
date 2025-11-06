@@ -40,17 +40,28 @@
     .hero { position:relative; }
     .hero-visual {
   width: 100%;
-  height: min(60vh, 520px);
+  height: min(62vh, 560px);
   border-radius: 0 0 var(--radius) var(--radius);
 
-  /* Del opp i tydelige linjer (mindre feilutsatt) */
+  /* Bildet + lett filter */
   background-image:
-    linear-gradient(135deg, rgba(14,165,164,.28), rgba(15,118,110,.28)),
+    linear-gradient(135deg, rgba(14,165,164,.24), rgba(15,118,110,.24)),
     url('assets/hero.jpg');
-  background-position: center 15%; /* mer fokus på ansiktet */
   background-size: cover;
   background-repeat: no-repeat;
+
+  /* Flytt utsnittet litt opp så hele ansiktet synes */
+  background-position: center 8%;
 }
+
+/* På mobil: litt lavere, så ansiktet ikke kuttes */
+@media (max-width: 680px) {
+  .hero-visual {
+    height: 44vh;
+    background-position: center 18%;
+  }
+}
+
 
 
     }
