@@ -39,12 +39,19 @@
     /* Hero med bilde (viser gradient hvis bilde mangler) */
     .hero { position:relative; }
     .hero-visual {
-      width:100%; height:min(54vh, 460px);
-      border-radius: 0 0 var(--radius) var(--radius);
-      background:
-       background:
-  linear-gradient(135deg, rgba(14,165,164,.28), rgba(15,118,110,.28)),
-  url('assets/hero.jpg') center 20% / cover no-repeat;
+  width: 100%;
+  height: min(60vh, 520px);
+  border-radius: 0 0 var(--radius) var(--radius);
+
+  /* Del opp i tydelige linjer (mindre feilutsatt) */
+  background-image:
+    linear-gradient(135deg, rgba(14,165,164,.28), rgba(15,118,110,.28)),
+    url('assets/hero.jpg');
+  background-position: center 15%; /* mer fokus på ansiktet */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
     }
     .hero .text { margin-top: -110px; }
