@@ -215,7 +215,23 @@ add header with logo
     /* ← Lim inn din FAQ-CSS her */
   </style>  <!-- dette er slutten -->
 </head>
- 
+ /* --- Tving hero-overskrift til én linje på desktop --- */
+.hero .text { 
+  max-width: 900px !important;   /* bredere tekstboks */
+  margin: 0 auto !important;     /* sentrer */
+}
+.hero h1 {
+  white-space: nowrap !important;                /* ikke bryt linja */
+  font-size: clamp(22px, 2.8vw, 31px) !important;/* litt mindre på store skjermer */
+  line-height: 1.18 !important;
+}
+
+/* På mobil: tillat linjebryting igjen */
+@media (max-width: 740px){
+  .hero h1 { white-space: normal !important; }
+  .hero .text { max-width: 92vw !important; }
+}
+
   </style>
   <script type="application/ld+json">
   {
