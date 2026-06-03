@@ -234,7 +234,112 @@ add header with logo
 </head>
 
 }
+/* RETTFYSIO DESIGNOPPGRADERING - START */
 
+/* Mykere hovedbakgrunn på hele siden */
+body {
+  background: #f8f6f2;
+}
+
+/* Gjør hovedinnholdet roligere og mer eksklusivt */
+main {
+  background: transparent;
+}
+
+/* Gir seksjonene mer luft og bedre rytme */
+section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+/* Lager myke tekstkort på seksjoner som ligger i midten */
+section .container,
+section .wrap,
+section .content,
+section .inner {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 42px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* Hvis noen seksjoner allerede har kort/bokser inni seg, gjør dem mykere */
+.card,
+.price-card,
+.service-card,
+.faq-item,
+.feature,
+.box {
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.055);
+}
+
+/* Mykere bakgrunn på annenhver seksjon for mer liv */
+section:nth-of-type(even) {
+  background: #f3f7f5;
+}
+
+section:nth-of-type(odd) {
+  background: #f8f6f2;
+}
+
+/* Sørger for at selve innholdet ikke blir for bredt */
+.container,
+.wrap,
+.content,
+.inner {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Litt varmere og roligere overskrifter */
+h1,
+h2,
+h3 {
+  color: #26372f;
+}
+
+/* Mykere vanlig tekst */
+p,
+li {
+  color: #37433d;
+}
+
+/* Gjør prislisten penere hvis den ligger som liste */
+.prices li,
+.price-list li,
+ul li {
+  line-height: 1.7;
+}
+
+/* Mykere knapper */
+a.button,
+.button,
+.btn,
+.cta,
+button {
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Litt ekstra luft på mobil, men ikke for mye */
+@media (max-width: 768px) {
+  section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  section .container,
+  section .wrap,
+  section .content,
+  section .inner {
+    padding: 26px;
+    border-radius: 18px;
+  }
+}
+
+/* RETTFYSIO DESIGNOPPGRADERING - SLUTT */
   </style>
   <script type="application/ld+json">
   {
