@@ -35,8 +35,103 @@ fbq('track', 'PageView');
   <meta property="og:url" content="https://rettfysio.no/">
   <meta name="theme-color" content="#0ea5a4">
   
+
+/* RETTFYSIO DELIKAT DESIGN - START */
+
+/* 1. Varm og rolig hovedbakgrunn */
+body {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(14, 165, 164, 0.10) 0, rgba(14, 165, 164, 0.10) 180px, transparent 360px),
+    radial-gradient(circle at 92% 34%, rgba(15, 118, 110, 0.08) 0, rgba(15, 118, 110, 0.08) 220px, transparent 420px),
+    radial-gradient(circle at 12% 82%, rgba(251, 191, 36, 0.10) 0, rgba(251, 191, 36, 0.10) 160px, transparent 340px),
+    #f8f6f2;
 }
 
+/* 2. Sørger for at hovedseksjoner ikke blir harde hvite flater */
+main,
+.page,
+.site-main {
+  background: transparent;
+}
+
+/* 3. Hvite, rolige tekstkort der innholdet ligger i container */
+section > .container,
+section > .wrap,
+section > .inner,
+section > .content {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  padding: 42px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+}
+
+/* 4. Mykere kort/bokser hvis siden allerede bruker slike */
+.card,
+.service-card,
+.price-card,
+.faq-item,
+.box,
+.feature {
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.055);
+  border: 1px solid rgba(15, 118, 110, 0.08);
+}
+
+/* 5. Litt mer luft mellom seksjonene */
+section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* 6. Mykere overskrifter */
+h1,
+h2,
+h3 {
+  color: #26372f;
+}
+
+/* 7. Roligere brødtekst */
+p,
+li {
+  color: #37433d;
+}
+
+/* 8. Små detaljer på knapper */
+button,
+.button,
+.btn,
+.cta,
+a.button {
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* 9. Mobiltilpasning */
+@media (max-width: 768px) {
+  body {
+    background:
+      radial-gradient(circle at 0% 12%, rgba(14, 165, 164, 0.09) 0, rgba(14, 165, 164, 0.09) 130px, transparent 260px),
+      radial-gradient(circle at 100% 65%, rgba(15, 118, 110, 0.07) 0, rgba(15, 118, 110, 0.07) 150px, transparent 300px),
+      #f8f6f2;
+  }
+
+  section {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  section > .container,
+  section > .wrap,
+  section > .inner,
+  section > .content {
+    padding: 26px;
+    border-radius: 18px;
+  }
+}
+
+/* RETTFYSIO DELIKAT DESIGN - SLUTT */
   <style>
     :root {
      --bg: #f8f6f2;
